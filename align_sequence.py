@@ -102,8 +102,8 @@ def indexed_alignment(query, reference, kmer = 12):
 
     # for key in score_dict.keys():
     #     print("Match found at ", key, " with alignment score of", score_dict[key])
-    print("The best match was found at", best_score[0], "with a score of", best_score[1])
-    print()
+    location,score = (best_score[0][0],best_score[1])
+    print("The best match was found from", location+1, "to", location+len(query), "with a score of", score)
             
 def print_global_alignment(alignment_matrix,seq1,seq2):
     first_sequence = ""

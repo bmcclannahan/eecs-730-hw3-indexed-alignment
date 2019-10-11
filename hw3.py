@@ -19,10 +19,13 @@ for query in queries:
     indexed_alignment(query,reference)
     end = time.time()
     indexed_timing.append(end-start)
+    print("Indexed timing:", end-start)
     start = time.time()
     global_alignment(query,reference)
-    end = time.time
+    end = time.time()
     global_timing.append(end-start)
+    print("Global timing:", end-start)
+    print()
 
 print("Average time for indexed alignment:", sum(indexed_timing)/len(indexed_timing))
 print("Average time for global alignment:", sum(global_timing)/len(global_timing))
